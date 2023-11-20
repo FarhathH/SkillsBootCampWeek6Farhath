@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Glass Antiqua', cursive;
+
 }
 
 .App-logo {
@@ -36,3 +40,4 @@
     transform: rotate(360deg);
   }
 }
+
