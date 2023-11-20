@@ -13,20 +13,34 @@ function RandomNum(){
     const[lives, setLives] = useState(3)
     const[gameOver, setGameOver] = useState(false)
     const[youWin, setYouWin] = useState(false)
+    const[messageColour, setMessageColour] = useState("white")
+
+
     
     
-    
+    //This function will reset the details and layout again for another try.
     function Reset(){
         setGameOver(false)
         setLives(3)
         setMessage("Guess the number between 1 and 10")
+        setMessageColour("white")
     }
 
     // This should change the message based on input from user.
     function MakeGuess(){
-        if(guess == answer){
+        
+        // The colour change indicates how close the user is to the answer.
+        if(Math.abs(guess-answer)<= 2){
+            setMessageColour("orange")
+        }
+        else if(Math.abs(guess-answer)>2){
+            setMessageColour("red")
+        }
+
+        if(guess == answer){ //For the correct answer
             setMessage("You got it")
             setGameOver(true)
+            setMessageColour("green")
         }
         else if(guess>answer && lives>0){
             setMessage("Too high")
@@ -34,7 +48,7 @@ function RandomNum(){
         else if(guess<answer && lives>0){
             setMessage("Too low") 
         }
-        else if(lives == 0){
+        else if(lives == 0){ //Will trigger the game over screen.
             setMessage("Loser")
             setGameOver(true)
         }
@@ -46,8 +60,9 @@ function RandomNum(){
     return(
     <>
         <div className = "box">
-            <h2>{message}</h2>
+            <h2 style = {{color:messageColour}}>{message}</h2>
 
+            {/*Disappears when gameOver bool is no longer false.*/}
             {gameOver == false &&
             <>
                 <div className = "layout">
