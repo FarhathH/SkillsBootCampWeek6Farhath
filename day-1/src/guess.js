@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 
 
-function RandomNum(){
+function RandomNum(props){
    
     // useState variable to use for checking condition
     const[guess, setGuess] = useState("")
@@ -15,7 +15,10 @@ function RandomNum(){
     const[youWin, setYouWin] = useState(false)
     const[messageColour, setMessageColour] = useState("white")
 
-
+    //function to randomly generate new answer.
+    function GetRandomNumber(max){
+        Math.floor(Math.random()* props.max)
+    }
     
     
     //This function will reset the details and layout again for another try.
@@ -24,6 +27,7 @@ function RandomNum(){
         setLives(3)
         setMessage("Guess the number between 1 and 10")
         setMessageColour("white")
+        setAnswer(GetRandomNumber(10))
     }
 
     // This should change the message based on input from user.
@@ -61,7 +65,7 @@ function RandomNum(){
     <>
         <div className = "box">
             <h2 style = {{color:messageColour}}>{message}</h2>
-
+            <h4>Lives: {lives}</h4>
             {/*Disappears when gameOver bool is no longer false.*/}
             {gameOver == false &&
             <>
@@ -72,7 +76,7 @@ function RandomNum(){
                     <button onClick = {MakeGuess} className = "guess-button">
                         <strong>GUESS</strong>
                     </button>
-                    <h4>Lives: {lives}</h4>
+                    
                 </div>
             </>
             }
