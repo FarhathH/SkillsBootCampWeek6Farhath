@@ -9,18 +9,29 @@ function RandomNum(){
     // useState variable to use for checking condition
     const[guess, setGuess] = useState("")
     const[answer, setAnswer] = useState(5)
-    const [message, setMessage] = useState("Guess the number between 1 and 10")  
+    const[message, setMessage] = useState("Guess the number between 1 and 10")  
+    const[lives, setLives] = useState(3)
 
     // This should change the message based on input from user.
     function MakeGuess(){
-        if(guess<answer){
-            setMessage("Too low")
+        if(guess == answer){
+            setMessage("You got it")
         }
-        else if(guess>answer){
+        else if(guess>answer && lives>0){
+            setLives(lives-1)
             setMessage("Too high")
-        }else{
-            setMessage("You got it!")
+            alert(`You have ${lives} remaining`)
         }
+        else if(guess<answer && lives>0){
+            setLives(lives-1)
+            setMessage("Too low")
+            alert(`You have ${lives} remaining`)
+        }
+        else if(lives == 0){
+            setMessage("Loser")
+        }
+        
+        
    }
    
 //    This should be displayed on the interface
