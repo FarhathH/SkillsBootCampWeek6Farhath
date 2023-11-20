@@ -1,4 +1,13 @@
+
+.box{
+    width:80vw;
+    height:40vh;
+    background-color: rgb(131, 127, 255);
+}
+
+
 .layout{
+    margin:20px;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -12,7 +21,6 @@
     width:15vw;
     height:10vh;
     background-color: white;
-    border-radius: 100px;
     margin:25px;
     font-size:50px;
     padding:10px;
