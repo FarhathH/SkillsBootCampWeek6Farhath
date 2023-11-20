@@ -1,39 +1,24 @@
 import './guess.css';
+import {useState} from 'react';
 
 
-const TheAnswer = 10;
-
-
-function Correction(){
-    if(TheAnswer == <input/>){
-        return(
-            <h3>Correct</h3>
-        );
-    }else{
-        return(
-            <h3>Try again</h3>
-        );
-    }
-}
 
 
 function RandomNum(){
    
-
-   return(
+    const[guess, setGuess] = useState("") 
+   
+    return(
     <>
         <h2>Guess the number:</h2>
-        <div class = "layout">
-            
-            <input type = "number" className = "input-guess">
-                
-            </input>
-                
-            <button onClick={Correction} className = "guess-button">
+        {guess}
+        <div className = "layout">
+            <input type = "number" className = "input-guess" onChange={(setGuess)=>{console.log(setGuess.target.value)}}/>     
+            <button className = "guess-button">
                 <strong>GUESS</strong>
             </button>
         </div>
-        <h3></h3>
+        <h3 id = "help-me"></h3>
     </>
    );
 
