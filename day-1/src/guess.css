@@ -1,8 +1,9 @@
-
 .box{
     width:80vw;
     height:40vh;
     background-color: rgb(131, 127, 255);
+    margin: 10px;
+    border-radius: 20px;
 }
 
 
@@ -49,4 +50,5 @@
     transition:0.5s;
 
 }
+
 
