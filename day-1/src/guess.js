@@ -11,9 +11,9 @@ function RandomNum(){
     return(
     <>
         <h2>Guess the number:</h2>
-        {guess}
+        {typeof guess}
         <div className = "layout">
-            <input type = "number" className = "input-guess" onChange={(event)=>{setGuess(event.target.value)}}/>     
+            <input type = "number" className = "input-guess" onChange={(event)=>{setGuess(parseInt(event.target.value))}}/>     
             <button className = "guess-button">
                 <strong>GUESS</strong>
             </button>

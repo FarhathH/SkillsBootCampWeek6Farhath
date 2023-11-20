@@ -27,7 +27,7 @@
     color:blue;
     margin:25px;
     font-size:25px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .guess-button:hover{
@@ -38,7 +38,7 @@
     margin:25px;
     font-size:25px;
     cursor: pointer;
-    transition:1s;
+    transition:0.5s;
 
 }
 
