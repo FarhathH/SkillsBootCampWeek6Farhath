@@ -4,11 +4,11 @@ import {useState} from 'react'; //use allows us to use this feature for variable
 
 
 
-function RandomNum(props){
+function RandomNum(){
    
     // useState variable to use for checking condition
     const[guess, setGuess] = useState("")
-    const[answer, setAnswer] = useState(GetRandomNumber(props.max))
+    const[answer, setAnswer] = useState(GetRandomNumber(10))
     const[message, setMessage] = useState("Guess the number between 1 and 10")  
     const[lives, setLives] = useState(3)
     const[gameOver, setGameOver] = useState(false)
