@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {users.map((user)=>{
+        {users.map((user)=>{ //will go through each iteration each time.
 
           return(
             <div> {/*rendering of the function*/}
