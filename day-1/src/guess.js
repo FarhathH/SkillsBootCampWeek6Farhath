@@ -72,7 +72,7 @@ function RandomNum(props){
             {/*Disappears when gameOver bool is no longer false.*/}
             {gameOver == false &&
             <>
-                <h4>Lives: {lives}</h4>
+                <h4>Lives: {props.lives}</h4>
                 <div className = "layout">
                     {/* onChange function takes input as setGuess. */}
                     <input type = "number" className = "input-guess" onChange={(event)=>{setGuess(parseInt(event.target.value))}}/> 
