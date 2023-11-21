@@ -6,7 +6,7 @@ import {useState} from 'react';
 
 function App() {
 
-  let users = [ //list for iterating objects in map function.
+  const[users, setUsers]  = useState([ //list for iterating objects in map function.
     {
       name:"Penni the Dancing Cholo",
       age:45,
@@ -34,7 +34,7 @@ function App() {
       profession:"Mascot",
       pic:"grimace.jpg"
     }
-  ]
+  ])
 
   
 
