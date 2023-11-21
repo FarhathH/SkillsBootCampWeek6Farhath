@@ -4,22 +4,22 @@ import {useState} from 'react'; //use allows us to use this feature for variable
 
 
 
-function RandomNum(){
+function RandomNum(props){
    
     // useState variable to use for checking condition
     const[guess, setGuess] = useState("")
-    const[answer, setAnswer] = useState(GetRandomNumber(10))
+    const[answer, setAnswer] = useState(props.answer)
     const[message, setMessage] = useState("Guess the number between 1 and 10")  
-    const[lives, setLives] = useState(3)
+    const[lives, setLives] = useState(props.lives)
     const[gameOver, setGameOver] = useState(false)
     const[youWin, setYouWin] = useState(false)
     const[messageColour, setMessageColour] = useState("white")
 
     //function to randomly generate new answer.
-    function GetRandomNumber(max){
-        return(Math.floor(Math.random()*max)
-        );
-    }
+    // function GetRandomNumber(max){
+    //     return(Math.floor(Math.random()*max)
+    //     );
+    // }
     
     
     //This function will reset the details and layout again for another try.
@@ -42,6 +42,7 @@ function RandomNum(){
         else if(Math.abs(guess-answer)>2){
             setMessageColour("red")
         }
+        
 
         if(guess == answer){ //For the correct answer
             setMessage("You got it")
@@ -65,8 +66,8 @@ function RandomNum(){
 //    This should be displayed on the interface
     return(
     <>
-        <div className = "box">
-            <h2 style = {{color:messageColour}}>{message}</h2>
+        <div style = {{backgroundColor:props.col}} className = "box"> {/*set the background colour iteration*/}
+            <h2 style = {{color:messageColour}}>{message}</h2> {/*colour for the font*/}
             
             {/*Disappears when gameOver bool is no longer false.*/}
             {gameOver == false &&
