@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <RandomNum/> {/**/}
+       <RandomNum max = {10}/> {/**/}
       </header>
     </div>
   );

@@ -1,5 +1,5 @@
-import './guess.css';
-import {useState} from 'react';
+import './guess.css'; //my stylesheet
+import {useState} from 'react'; //use allows us to use this feature for variables to store info
 
 
 
@@ -8,7 +8,7 @@ function RandomNum(props){
    
     // useState variable to use for checking condition
     const[guess, setGuess] = useState("")
-    const[answer, setAnswer] = useState(5)
+    const[answer, setAnswer] = useState(GetRandomNumber(props.max))
     const[message, setMessage] = useState("Guess the number between 1 and 10")  
     const[lives, setLives] = useState(3)
     const[gameOver, setGameOver] = useState(false)
@@ -17,7 +17,8 @@ function RandomNum(props){
 
     //function to randomly generate new answer.
     function GetRandomNumber(max){
-        Math.floor(Math.random()* props.max)
+        return(Math.floor(Math.random()*max)
+        );
     }
     
     
@@ -27,7 +28,8 @@ function RandomNum(props){
         setLives(3)
         setMessage("Guess the number between 1 and 10")
         setMessageColour("white")
-        setAnswer(GetRandomNumber(10))
+        
+        
     }
 
     // This should change the message based on input from user.
@@ -65,10 +67,11 @@ function RandomNum(props){
     <>
         <div className = "box">
             <h2 style = {{color:messageColour}}>{message}</h2>
-            <h4>Lives: {lives}</h4>
+            
             {/*Disappears when gameOver bool is no longer false.*/}
             {gameOver == false &&
             <>
+                <h4>Lives: {lives}</h4>
                 <div className = "layout">
                     {/* onChange function takes input as setGuess. */}
                     <input type = "number" className = "input-guess" onChange={(event)=>{setGuess(parseInt(event.target.value))}}/> 
