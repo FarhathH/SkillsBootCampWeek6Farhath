@@ -29,7 +29,7 @@ function App() {
 
     },
     {
-      name:"Grimace",
+      name:"Grimace Singh",
       age:52,
       profession:"Mascot",
       pic:"grimace.jpg"

@@ -6,7 +6,8 @@
     flex-direction: row;
     align-items: center;
     margin: 50px;
-    box-shadow: -10px -10px 15px 15px rgb(73, 75, 68);
+    border:5px solid transparent;
+    border-image:url("macabre.jpg") 50;
     
 }
 
@@ -47,3 +48,13 @@
     font-weight: bold;
     font-size: 25px;
 }
+
+.btn{
+    padding:10px;
+    
+    box-shadow: 5px 5px 5px 5px black;
+    background-color: black;
+    color:white;
+    
+}
+

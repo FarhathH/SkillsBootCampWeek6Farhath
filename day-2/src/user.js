@@ -25,6 +25,8 @@ function User(props){
                 <p className = "chunk">Age: {age} </p>
                 <p className = "chunk">Profession: {profession} </p>
             </div>
+
+            <div class = "piece"><button className = "btn">SEND FRIEND REQUEST</button></div>
         </div>
     );
 }
