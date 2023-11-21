@@ -8,6 +8,8 @@ import {useState} from 'react';
 
 //Made functional component to displaying intro
 function User(props){
+
+
     const[name, setName] = useState(props.name);
     const[age, setAge] = useState(props.age);
     const[profession, setProfession] = useState(props.profession);
@@ -19,7 +21,7 @@ function User(props){
             <div className = "img"><img src = {pic} className = "img2"></img></div>
             
             <div className = "info"> {/*contains info about user with placeholders*/}
-                <p className = "chunk2">Name:{name} </p>
+                <p className = "chunk2">Name: {name} </p>
                 <p className = "chunk">Age: {age} </p>
                 <p className = "chunk">Profession: {profession} </p>
             </div>

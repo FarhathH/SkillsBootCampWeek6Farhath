@@ -5,12 +5,54 @@ import {useState} from 'react';
 
 
 function App() {
+
+  let users = [ //list for iterating objects in map function.
+    {
+      name:"Penni the Dancing Cholo",
+      age:45,
+      profession: "Streamer",
+      pic:"koala.jpg"
+    },
+
+    {
+      name:"Mookie Pendejo",
+      age: 36,
+      profession: "Cartoon character",
+      pic:'sr-pelo-google-form.jpg'
+    },
+
+    {
+      name:"Crawl Anderson",
+      age: 19,
+      profession:"Edgelord",
+      pic:"crawling.jpg"
+
+    },
+    {
+      name:"Grimace",
+      age:52,
+      profession:"Mascot",
+      pic:"grimace.jpg"
+    }
+  ]
+
+  
+
+  
+
   return (
     <div className="App">
       <header className="App-header">
-        <User name = {"Penni the Dancing Cholo"} age = {45} profession = {"Streamer"} pic = {'koala.jpg'}/> {/*rendering the function*/}
-        <User name = {"Mookie Pendejo"} age = {36} profession = {"Cartoon character"} pic = {'sr-pelo-google-form.jpg'}/> {/*rendering the function*/}
-        <User name = {"Crawl Anderson"} age = {19} profession = {"Edgelord"} pic = {'crawling.jpg'}/> {/*rendering the function*/}
+        {users.map((user)=>{
+
+          return(
+            <div> {/*rendering of the function*/}
+              <User name = {user.name} age = {user.age} profession = {user.profession} pic = {user.pic}/>
+            </div>
+          );
+        })}
+
+        
       </header>
     </div>
   );
