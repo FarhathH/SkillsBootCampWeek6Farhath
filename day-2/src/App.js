@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <User name = {"Penni the Dancing Cholo"} age = {45} profession = {"Streamer"} pic = {'koala.jpg'}/> {/*rendering the function*/}
-        <User name = {"Let me in"} age = {36} profession = {"Animator"} pic = {'sr-pelo-google-form.jpg'}/> {/*rendering the function*/}
-        <User name = {"These crawls they will not crawl"} age = {19} profession = {"Edgelord"} pic = {'crawling.jpg'}/> {/*rendering the function*/}
+        <User name = {"Mookie Pendejo"} age = {36} profession = {"Cartoon character"} pic = {'sr-pelo-google-form.jpg'}/> {/*rendering the function*/}
+        <User name = {"Crawl Anderson"} age = {19} profession = {"Edgelord"} pic = {'crawling.jpg'}/> {/*rendering the function*/}
       </header>
     </div>
   );

@@ -18,7 +18,7 @@ function User(props){
         <div className = "page">
             <div className = "img"><img src = {pic} className = "img2"></img></div>
             
-            <div className = "info">
+            <div className = "info"> {/*contains info about user with placeholders*/}
                 <p className = "chunk2">Name:{name} </p>
                 <p className = "chunk">Age: {age} </p>
                 <p className = "chunk">Profession: {profession} </p>
