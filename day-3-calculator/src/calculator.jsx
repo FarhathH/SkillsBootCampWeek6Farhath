@@ -1,5 +1,5 @@
 import React from "react"; //importing framework
-//importing other
+//importing other functions to be used
 import {CalculatorDisplay} from './calculatorDisplay';
 import {CalculatorButton} from './calculatorButton';
 
@@ -7,10 +7,10 @@ export const Calculator = () => {
     return(
         <>
         
-        <CalculatorDisplay/>
+        <CalculatorDisplay input = {23} result = {23}/>
         
         <CalculatorButton/>
-            <div>Calculator</div>
+            
             
         </>
     );

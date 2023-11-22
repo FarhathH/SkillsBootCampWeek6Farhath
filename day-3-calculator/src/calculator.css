@@ -11,11 +11,13 @@
 .display{
     background-color: cadetblue;
     height:20vh;
-    width:50vw;
+    width:45vw;
+    margin:10px;
+    text-align: right;
 }
 .btn-group{
     display:flex;
-    flex-direction: row;
+    
 }
 
 .button{
