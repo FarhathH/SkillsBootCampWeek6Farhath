@@ -9,12 +9,26 @@ import {useState} from 'react';
 //Made functional component to displaying intro
 function User(props){
 
-
+    //useState objects to placehold
     const[name, setName] = useState(props.name);
     const[age, setAge] = useState(props.age);
     const[profession, setProfession] = useState(props.profession);
     const[pic, setPic] = useState(props.pic);
-  
+    const[buttonMessage, setButtonMessage] = useState("SEND FRIEND REQUEST");
+    const[newButtonBackground, setButtonBackground] = useState("black");
+    const[buttonFont, setButtonFont] = useState("white");
+
+    let onClick = false;
+
+    //this triggers when user clicks the button
+   function buttonClick(){
+           if(onClick = true){
+                setButtonMessage("FRIEND REQUEST SENT")
+                setButtonBackground("white")
+                setButtonFont("black")
+           }
+        }
+   
     
     return( //html below displays info about user
         <div className = "page">
@@ -25,8 +39,8 @@ function User(props){
                 <p className = "chunk">Age: {age} </p>
                 <p className = "chunk">Profession: {profession} </p>
             </div>
-
-            <div class = "piece"><button className = "btn">SEND FRIEND REQUEST</button></div>
+            {/*This will*/}
+            <div class = "piece"><button onClick = {buttonClick} style = {{backgroundColor:newButtonBackground, color:buttonFont}} className = "btn">{buttonMessage}</button></div> {/*Just a button*/}
         </div>
     );
 }
