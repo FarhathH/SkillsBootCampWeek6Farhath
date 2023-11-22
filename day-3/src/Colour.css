@@ -1,14 +1,15 @@
 .page{
-    height: 90vh;
-    width:50vw;
+    height: 10vh;
+    width:10vw;
     background-color: aqua;
     display:flex;
     flex-direction: row;
+    margin:10px;
 }
 
 .mini{
-    background-color: azure;
-    border:5px solid white;
+    
+    color:white;
     margin:5px;
     height:10vh;
     width:10vw;

@@ -2,16 +2,15 @@ import './Colour.css';
 import {useState} from 'react';
 
 function ColourButton(props){
-
+    //useState function for single variable.
     const[colourBackground, setColourBackground] = useState(props.colourBackground);
-
-
+        
+    //executes when function runs
     return(
         <>
-        <div className = "page">
-            <p style = {{backgroundColor:colourBackground}} className = "mini">{colourBackground}</p>
-            
-        </div>
+        <button style = {{backgroundColor: props.colourBackground}} className = "page">
+             <p class = "mini">{props.colourBackground}</p>
+        </button>
         <div className = "bottom">
         
         </div>
