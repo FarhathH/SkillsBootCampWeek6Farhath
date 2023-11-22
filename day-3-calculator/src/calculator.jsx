@@ -1,9 +1,17 @@
-import React from "react";
-import {calculatorDisplay} from './calculatorDisplay';
-import {calculatorButton} from './calculatorButton';
+import React from "react"; //importing framework
+//importing other
+import {CalculatorDisplay} from './calculatorDisplay';
+import {CalculatorButton} from './calculatorButton';
 
 export const Calculator = () => {
     return(
-        <div>Calculator</div>
+        <>
+        
+        <CalculatorDisplay/>
+        
+        <CalculatorButton/>
+            <div>Calculator</div>
+            
+        </>
     );
 }

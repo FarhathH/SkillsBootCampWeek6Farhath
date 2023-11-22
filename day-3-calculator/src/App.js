@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import './calculator.css'
-import {Calculator} from './calculator';
+import './calculator.css' //stylesheet
+import {Calculator} from './calculator'; //allowing us call the function
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Calculator/>
+        <div className = "cal">
+        <Calculator/> {/*rendering the function*/}
+        </div>
       </header>
     </div>
   );
