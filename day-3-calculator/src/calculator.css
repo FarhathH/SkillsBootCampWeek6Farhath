@@ -1,7 +1,7 @@
 /* This just formats the calculator */
 
 .cal{
-    height:90vh;
+    height:75vh;
     width:50vw;
     background-color: antiquewhite;
     display:flex;
