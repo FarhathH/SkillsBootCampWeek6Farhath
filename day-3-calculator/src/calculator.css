@@ -1,0 +1,28 @@
+.cal{
+    height:90vh;
+    width:50vw;
+    background-color: antiquewhite;
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+
+}
+
+.display{
+    background-color: cadetblue;
+    height:20vh;
+    width:50vw;
+}
+.btn-group{
+    display:flex;
+    flex-direction: row;
+}
+
+.button{
+    border:3px solid rose;
+    background-color: black;
+    height:55px;
+    width:55px;
+    margin:10px;
+
+}
