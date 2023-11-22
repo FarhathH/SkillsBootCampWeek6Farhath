@@ -28,7 +28,16 @@
 .img:hover{
     scale:110%;
     background:url("l-rizz.gif");
-    animation: spin 1s linear infinite;
+    animation: img-spin infinite 0.1s linear;
+}
+
+@keyframes img-spin{
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
 }
 
 .img2{
