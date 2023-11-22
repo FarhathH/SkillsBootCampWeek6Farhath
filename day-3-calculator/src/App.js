@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>Calculator</div>
+        
         <div className = "cal">
         
         <Calculator/> {/*rendering the function*/}

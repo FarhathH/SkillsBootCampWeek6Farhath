@@ -1,65 +1,91 @@
 import React from "react"; //importing framework
+
+import * as math  from 'mathjs'; //new library
+
 //importing other functions to be used
 import {CalculatorDisplay} from './calculatorDisplay';
 import {CalculatorButton} from './calculatorButton';
+import {useState} from "react";
 
 export const Calculator = () => {
+    //useState variables for display
+    const[input, setInput] = useState('');
+    const[result, setResult] = useState('');
+
+    const handleClick = (value) =>{
+        if(value === '='){
+            const newResult = math.evaluate(input)
+            setResult(newResult.toString())
+        }
+        else if(value === 'C'){
+            setInput('')
+            setResult('')
+        }
+        else if((value) === 'Del'){
+            setInput((prevInput)=>prevInput.slice(0,-1))
+        }else{
+            setInput((prevInput) => prevInput + value)
+        }
+        
+    }
+
     return(
         <>
-        
-        <CalculatorDisplay input = {23} result = {23}/>
+        <div style =  {{color:"black"}}>Calculator</div>
+
+        <CalculatorDisplay input = {input} result = {result}/> {/*rendering the display*/}
         
         {/*displaying calculator buttons row by row*/}
         <div className = "btn-group">
-            <div className = "button">
-                {['7','8','9','/'].map((value)=>{
+            <div >
+                {['1','4','7','/'].map((value)=>{
                     return(
                         <>
-                            <CalculatorButton value = {value} onClick={}/>
+                            <CalculatorButton value = {value} onClick={handleClick}/>
                         </>
                     );
                 })};
 
             </div>
 
-            <div className = "button">
-                {['4','5','6','*'].map((value)=>{
+            <div>
+                {['2','5','8','*'].map((value)=>{
                     return(
                         <>
-                            <CalculatorButton value = {value} onClick={}/>
+                            <CalculatorButton value = {value} onClick={handleClick}/>
                         </>
                     );
                 })};
 
             </div>
 
-            <div className = "button">
-                {['1','2','3','-'].map((value)=>{
+            <div>
+                {['3','6','9','-'].map((value)=>{
                     return(
                         <>
-                            <CalculatorButton value = {value} onClick={}/>
+                            <CalculatorButton value = {value} onClick={handleClick}/>
                         </>
                     );
                 })};
 
             </div>
 
-            <div className = "button">
+            <div>
                 {['0','.','=','+'].map((value)=>{
                     return(
                         <>
-                            <CalculatorButton value = {value} onClick={}/>
+                            <CalculatorButton value = {value} onClick={handleClick}/>
                         </>
                     );
                 })};
 
             </div>
 
-            <div className = "button">
+            <div>
                 {['Del','C'].map((value)=>{
                     return(
                         <>
-                            <CalculatorButton value = {value} onClick={}/>
+                            <CalculatorButton value = {value} onClick={handleClick}/>
                         </>
                     );
                 })};
