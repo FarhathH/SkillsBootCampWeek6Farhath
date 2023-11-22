@@ -1,0 +1,19 @@
+.page{
+    height: 90vh;
+    width:50vw;
+    background-color: aqua;
+    display:flex;
+    flex-direction: row;
+}
+
+.mini{
+    background-color: azure;
+    border:5px solid white;
+    margin:5px;
+    height:10vh;
+    width:10vw;
+}
+
+.bottom{
+
+}
