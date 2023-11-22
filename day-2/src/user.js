@@ -17,17 +17,24 @@ function User(props){
     const[buttonMessage, setButtonMessage] = useState("SEND FRIEND REQUEST");
     const[newButtonBackground, setButtonBackground] = useState("black");
     const[buttonFont, setButtonFont] = useState("white");
-
-    let onClick = false;
+    const[buttonClick, setbuttonClick] = useState(false);
+    //bool for button click trigger
+    
 
     //this triggers when user clicks the button
-   function buttonClick(){
-           if(onClick = true){
-                setButtonMessage("FRIEND REQUEST SENT")
-                setButtonBackground("white")
-                setButtonFont("black")
-           }
-        }
+   function buttonSelect(){
+        
+        setbuttonClick(true)
+        setButtonMessage("REQUEST SENT")
+        setButtonBackground("white")
+        setButtonFont("black")
+        
+        // if(buttonClick == true && ){
+
+        // }
+    }
+
+
    
     
     return( //html below displays info about user
@@ -40,7 +47,7 @@ function User(props){
                 <p className = "chunk">Profession: {profession} </p>
             </div>
             {/*This will*/}
-            <div class = "piece"><button onClick = {buttonClick} style = {{backgroundColor:newButtonBackground, color:buttonFont}} className = "btn">{buttonMessage}</button></div> {/*Just a button*/}
+            <div class = "piece"><button onClick = {buttonSelect} style = {{backgroundColor:newButtonBackground, color:buttonFont}} className = "btn">{buttonMessage}</button></div> {/*Just a button*/}
         </div>
     );
 }

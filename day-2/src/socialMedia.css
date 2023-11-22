@@ -28,6 +28,7 @@
 .img:hover{
     scale:110%;
     background:url("l-rizz.gif");
+    animation: spin 1s linear infinite;
 }
 
 .img2{
