@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Calculator from './calculator.js'
+import Calculator from './calculator.js' //imports the function needed
 
 function App() {
   return (
