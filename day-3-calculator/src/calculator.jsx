@@ -40,9 +40,9 @@ export const Calculator = () => {
             <div >
                 {['1','4','7','/'].map((value)=>{
                     return(
-                        <>
+                        <div className = "answer">
                             <CalculatorButton value = {value} onClick={handleClick}/>
-                        </>
+                        </div>
                     );
                 })};
 
@@ -51,9 +51,9 @@ export const Calculator = () => {
             <div>
                 {['2','5','8','*'].map((value)=>{
                     return(
-                        <>
+                        <div className = "answer">
                             <CalculatorButton value = {value} onClick={handleClick}/>
-                        </>
+                        </div>
                     );
                 })};
 
@@ -62,9 +62,9 @@ export const Calculator = () => {
             <div>
                 {['3','6','9','-'].map((value)=>{
                     return(
-                        <>
+                        <div className="answer">
                             <CalculatorButton value = {value} onClick={handleClick}/>
-                        </>
+                        </div>
                     );
                 })};
 
@@ -73,9 +73,9 @@ export const Calculator = () => {
             <div>
                 {['0','.','=','+'].map((value)=>{
                     return(
-                        <>
+                        <div className="answer">
                             <CalculatorButton value = {value} onClick={handleClick}/>
-                        </>
+                        </div>
                     );
                 })};
 
@@ -84,9 +84,9 @@ export const Calculator = () => {
             <div>
                 {['Del','C'].map((value)=>{
                     return(
-                        <>
+                        <div className="answer">
                             <CalculatorButton value = {value} onClick={handleClick}/>
-                        </>
+                        </div>
                     );
                 })};
 
