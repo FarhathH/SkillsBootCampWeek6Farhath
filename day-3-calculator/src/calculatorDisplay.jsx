@@ -6,7 +6,7 @@ export const CalculatorDisplay = ({input, result}) => {
         
             <div>
                 <input className = "display" type = "text" value = {input} readOnly/>
-                <div>{result}</div>
+                <div className = "answer">{result}</div>
             </div>
         
     );
