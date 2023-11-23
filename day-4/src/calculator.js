@@ -1,11 +1,19 @@
 
 //gives us the layout of the calculator.
-function calculator(){
+function Calculator(){
     return(
-        <div className = "main-body">
-            <div className="display-screen"></div>
-            <div className="operators"></div>
-            <div className="num-btns"></div>
+        <div className = "calc-container">
+            <div className="calc-space">
+                <div className="calc-display"></div>
+            </div>
+            <div className="calc-operators">
+
+            </div>
+            <div className="calc-numbers">
+
+            </div>
         </div>
     );
 }
+
+export default Calculator;
