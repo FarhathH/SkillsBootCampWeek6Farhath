@@ -8,7 +8,7 @@ import {CalculatorButton} from './calculatorButton';
 import {useState} from "react";
 
 export const Calculator = () => {
-    //useState variables for display
+    //useState variables for display and result
     const[input, setInput] = useState('');
     const[result, setResult] = useState('');
 
